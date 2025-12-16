@@ -40,6 +40,9 @@ export interface UserProfile {
   companyBio?: string;
   socialLinks?: SocialLinks;
   webhookUrl: string;
+  blogUrl?: string;
+  lastBlogCheck?: string;
+  latestPostTitle?: string;
   logoUrl?: string;
   avatarUrl?: string;
   language: Language;

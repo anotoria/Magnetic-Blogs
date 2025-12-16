@@ -74,6 +74,13 @@ export const translations = {
     test_error: "Connection error: {error}",
     settings_saved: "Settings saved!",
 
+    // Blog Validation
+    blog_title: "Blog Validation",
+    blog_subtitle: "Verify published articles",
+    blog_desc: "Enter your blog URL to verify if new articles have been published.",
+    blog_url_label: "Blog URL",
+    blog_url_placeholder: "https://your-blog.com",
+
     // Profile
     profile_title: "Profile",
     change_avatar: "Change Avatar",
@@ -197,6 +204,13 @@ export const translations = {
     test_error: "Erro de conexão: {error}",
     settings_saved: "Configurações salvas!",
 
+    // Blog Validation
+    blog_title: "Validação do Blog",
+    blog_subtitle: "Verificar artigos publicados",
+    blog_desc: "Insira a URL do seu blog para verificar se novos artigos foram publicados.",
+    blog_url_label: "URL do Blog",
+    blog_url_placeholder: "https://seu-blog.com",
+
     // Profile
     profile_title: "Perfil",
     change_avatar: "Alterar Avatar",
@@ -319,6 +333,13 @@ export const translations = {
     test_fail: "Webhook falló con estado: {status}",
     test_error: "Error de conexión: {error}",
     settings_saved: "¡Configuración guardada!",
+
+    // Blog Validation
+    blog_title: "Validación del Blog",
+    blog_subtitle: "Verificar artículos publicados",
+    blog_desc: "Introduce la URL de tu blog para verificar si se han publicado nuevos artículos.",
+    blog_url_label: "URL del Blog",
+    blog_url_placeholder: "https://tu-blog.com",
 
     // Profile
     profile_title: "Perfil",
