@@ -1,0 +1,5 @@
+{
+  "name": "Magnetic Blogs",
+  "description": "A futuristic, AI-powered blog idea generator that researches trending topics and integrates with n8n workflows.",
+  "requestFramePermissions": []
+}
