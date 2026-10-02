@@ -1,0 +1,36 @@
+{
+ "data": "2026-10-05",
+ "edicao": "Edição de segunda · 5 de outubro",
+ "periodo": "30/09 a 03/10",
+ "manchete": "A semana em *8 posts*",
+ "lead": "Do WhatsApp que passou a cobrar ao topo do Google Maps: tudo o que saiu por aqui de quarta a sábado.",
+ "dias": [
+  {"dia": "Quarta-feira, 30/09", "curto": "Qua 30/09", "materias": [
+   {"titulo": "Renda extra *sem bets*", "resumo": "O modelo de assinatura: implantar atendimento com IA num negócio da sua cidade e cobrar mensalidade pra manter rodando.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/657fc4a/social/2026-09-30-bets/slide-1.jpg"}]},
+  {"dia": "Quinta-feira, 01/10", "curto": "Qui 01/10", "materias": [
+   {"titulo": "WhatsApp oficial passou a *cobrar*", "resumo": "Respostas na janela de 24h cobradas acima de 1.000 por mês, por número. Sem forma de pagamento, as respostas param.", "palavra": "Whats01", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/ea8ec194f12e285a87ff8704b735146bebea33cc/social/lote3-04-whatsapp-cobra/slide-1.jpg"},
+   {"titulo": "Agente de IA no WhatsApp *com o Claude*", "resumo": "Funciona, mas são 8 passos, código e servidor. Ou tudo num sistema só, sem programar.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/423b955/social/2026-10-01-agente-whatsapp/slide-1.jpg"}]},
+  {"dia": "Sexta-feira, 02/10", "curto": "Sex 02/10", "materias": [
+   {"titulo": "O que vender *em 2026*", "resumo": "Robô de IA qualquer um monta. Problema resolvido todo mês vira mensalidade: 5 serviços.", "palavra": "MAPAH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/f83f897d0d9cb36dd77ae9bd6aeeaad564d4fd39/social/lote3-01-o-que-vender/slide-1.jpg"},
+   {"titulo": "IA grátis *ou paga?*", "resumo": "Rápida, equilíbrio ou pesada: cada tarefa pede um modelo. E 4 hábitos que cortam o gasto de token.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/2f769c6/social/2026-10-02-ia-gratis/slide-1.jpg"},
+   {"titulo": "O Claude no *topo do Google Maps*", "resumo": "3 prompts: mapear o bairro, reescrever o perfil e 5 semanas de posts.", "palavra": "GOOGLE3P", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/be0ebafa80e9628e8202ad8ef735e858a3db98d3/social/lote4-01-google-maps/slide-1.jpg"}]},
+  {"dia": "Sábado, 03/10", "curto": "Sáb 03/10", "materias": [
+   {"titulo": "Seu ChatGPT *virou bagunça?*", "resumo": "Um projeto por cliente, memória só daquele projeto e instruções escritas uma vez só.", "palavra": "PROJETO7", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/b2f8650be43c677ef1e716e119049ddd25869c5d/social/lote4-02-projetos-ia/slide-1.jpg"},
+   {"titulo": "15 códigos pra IA *te explicar*", "resumo": "Atalhos que dizem pra IA em que formato você quer a resposta. Funciona no ChatGPT e no Claude.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/da42e1c/social/2026-10-03-15-codigos/slide-1.jpg"}]}
+ ],
+ "palavras": [
+  ["Whats01", "Checklist pra ajustar seu WhatsApp oficial"],
+  ["MAPAH", "Mapa dos 5 serviços que viram mensalidade"],
+  ["GOOGLE3P", "Guia com os 3 prompts do Google Maps"],
+  ["PROJETO7", "8 modelos de instruções pros seus projetos"],
+  ["HIGH", "Link pra conhecer o HighLevel"]
+ ],
+ "previsao": [
+  ["Seg 05/10", "8 painéis que todo negócio precisa ter"],
+  ["Ter 06/10", "7 serviços que empresa pequena já paga"],
+  ["Qua 07/10", "Um especialista em ofertas dentro do Claude"],
+  ["Qui 08/10", "As 8 IAs que o HighLevel tem dentro"],
+  ["Sex 09/10", "Página de nicho no Instagram sem aparecer"]
+ ],
+ "previsao_frase": "Tempo firme, com pancadas de IA ao longo da semana."
+}
