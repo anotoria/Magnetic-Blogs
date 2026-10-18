@@ -1,0 +1,43 @@
+{
+ "data": "2026-10-19",
+ "edicao": "Edição de segunda · 19 de outubro",
+ "periodo": "12/10 a 18/10",
+ "manchete": "A semana em *13 posts*",
+ "lead": "Da atendente com IA ao especialista de verdade: tudo o que saiu por aqui de segunda a domingo.",
+ "dias": [
+  {"dia": "Segunda-feira, 12/10", "curto": "Seg 12/10", "materias": [
+   {"titulo": "Atendente com IA *por voz e texto*", "resumo": "A mesma atendente no WhatsApp, Instagram, site, SMS e telefone, montada em 5 fases.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/7dd6b0d9ff0ec21db386ff9d353de2f8b17692ee/social/lote3-08-atendente-voz-texto/slide-1.jpg"},
+   {"titulo": "Subconta HighLevel *por $1*", "resumo": "A conta de verdade pro seu cliente, com CRM, funil, agenda e WhatsApp com IA.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/7dd6b0d9ff0ec21db386ff9d353de2f8b17692ee/social/2026-10-12-subcontas-1-dolar/slide-1.jpg"}]},
+  {"dia": "Terça-feira, 13/10", "curto": "Ter 13/10", "materias": [
+   {"titulo": "*7 agentes* de IA numa equipe", "resumo": "Recepção, voz, agenda, follow-up, reputação, gerente e conteúdo, com os workflows como cérebro.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/7dd6b0d9ff0ec21db386ff9d353de2f8b17692ee/social/lote3-09-sete-agentes/slide-1.jpg"},
+   {"titulo": "Empresa que roda *sem você*", "resumo": "Escreve o que faz toda semana, automatiza o que se repete e treina alguém no resto.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/6c6a7bbc769c109508e7a62974cc229671a524c7/social/frases-tweet/frase-04.jpg"},
+   {"titulo": "6 jeitos de *pedir pro Claude*", "resumo": "Papel e meta, exemplo, perguntas antes, formato, passo a passo e revisão no final.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/7dd6b0d9ff0ec21db386ff9d353de2f8b17692ee/social/2026-10-13-prompts-claude/slide-1.jpg"}]},
+  {"dia": "Quarta-feira, 14/10", "curto": "Qua 14/10", "materias": [
+   {"titulo": "Meu CRM *não veio pronto*", "resumo": "Comecei pelo que a operação não podia esquecer. Depois vieram campos, funis, automações e painel.", "palavra": "CRM10", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/64c9ca49b531a7a91df00110ee92edecebaa51b5/social/lote3-10-meu-crm/slide-1.jpg"},
+   {"titulo": "*50 códigos* pro ChatGPT e o Claude", "resumo": "Atalhos separados por tarefa que dizem pra IA em que formato responder.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/9e97b35/social/2026-10-14-50-codigos/slide-1.jpg"}]},
+  {"dia": "Quinta-feira, 15/10", "curto": "Qui 15/10", "materias": [
+   {"titulo": "Motivação começa, *constância chega*", "resumo": "Os dias sem vontade são os que separam quem prospera de quem só tentou.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/6c6a7bbc769c109508e7a62974cc229671a524c7/social/frases-tweet/frase-05.jpg"},
+   {"titulo": "Meu estagiário *é uma IA*", "resumo": "Leads, WhatsApp, agenda, follow-up e CRM em dia. Estratégia e decisão continuam com você.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/9e97b35/social/2026-10-15-estagiario-ia/slide-1.jpg"}]},
+  {"dia": "Sexta-feira, 16/10", "curto": "Sex 16/10", "materias": [
+   {"titulo": "Canal no YouTube *com o Claude*", "resumo": "7 prompts na ordem certa, do nicho até o canal pagando as contas.", "palavra": "CANAL7", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/d43f7cf837082fbde6e1e5380a5c80e41b36fdc1/social/canal7-youtube/slide-1.jpg"},
+   {"titulo": "3 assinaturas de IA, *nenhuma atende*", "resumo": "No Agent Studio do HighLevel você escolhe o modelo de cada agente.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/9e97b35/social/2026-10-16-3-assinaturas/slide-1.jpg"}]},
+  {"dia": "Sábado, 17/10", "curto": "Sáb 17/10", "materias": [
+   {"titulo": "Obsidian ou *cérebro de IA?*", "resumo": "Um organiza as notas, o outro responde com base nos seus materiais. E dá pra juntar os dois.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/9e97b35/social/2026-10-17-obsidian-cerebro/slide-1.jpg"}]},
+  {"dia": "Domingo, 18/10", "curto": "Dom 18/10", "materias": [
+   {"titulo": "Todo mundo virou *especialista em IA*", "resumo": "5 sinais de quem sabe de verdade, de mostrar resultado a cuidar depois da entrega.", "palavra": "HIGH", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/9e97b35/social/2026-10-18-especialista-ia/slide-1.jpg"}]}
+ ],
+ "palavras": [
+  ["CRM10", "Mapa da base e passo a passo do CRM"],
+  ["CANAL7", "Os 7 prompts completos pro seu canal"],
+  ["HIGH", "Link pra conhecer o HighLevel"]
+ ],
+ "previsao": [
+  ["Seg 19/10", "O que é CAC, explicado de um jeito simples"],
+  ["Ter 20/10", "A conta das ferramentas soltas"],
+  ["Qua 21/10", "Lead quente não espera resposta"],
+  ["Qui 22/10", "Aprovar post sem depender do WhatsApp"],
+  ["Sex 23/10", "Referência não nasce pronta"],
+  ["Sáb 24/10", "As 5 telas do HighLevel que eu abro todo dia"]
+ ],
+ "previsao_frase": "Céu aberto, com rajadas de IA no fim da tarde e chance alta de HighLevel."
+}

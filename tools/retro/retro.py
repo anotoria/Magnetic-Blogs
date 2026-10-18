@@ -74,6 +74,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif}
 .idx b{flex:none;width:190px;font:800 26px 'JetBrains Mono';color:#D15434;letter-spacing:.04em;text-transform:uppercase}
 .idx span{flex:1}
 .idx em{flex:none;font:700 24px 'JetBrains Mono';font-style:normal;color:#5b5047}
+.idx.cp div{padding:10px 0;font-size:30px}
 .carimbo{position:absolute;right:70px;bottom:120px;transform:rotate(-8deg);border:6px solid #D15434;color:#D15434;font:900 40px/1 'JetBrains Mono';padding:14px 22px;letter-spacing:.06em;text-align:center;z-index:2}
 .carimbo small{display:block;font-size:20px;margin-top:6px}
 .mat{display:flex;gap:30px;padding:30px 0;border-bottom:1px solid #17130F55}
@@ -115,7 +116,7 @@ def paginas(c):
                   for k, d in enumerate(c["dias"]) for m in d["materias"])
     P.append(f"""<div class="j">{mast(ed, "Pág. 1")}<span class="kick">Retrospectiva · {E(c["periodo"])}</span>
 <div class="man">{hl(c["manchete"])}</div><div class="lead">{E(c.get("lead", ""))}</div>
-<div class="idx">{idx}</div></div><div class="carimbo">A SEMANA<br>EM {total}<small>{E(c["periodo"])}</small></div>""")
+<div class="idx{' cp' if total > 9 else ''}">{idx}</div></div><div class="carimbo">A SEMANA<br>EM {total}<small>{E(c["periodo"])}</small></div>""")
     for k, d in enumerate(c["dias"]):
         ms = d["materias"]
         blocos = "".join(f"""<div class="mat"><div class="ft"><div style="background-image:url({img_uri(m.get("capa", ""))})"></div></div>
