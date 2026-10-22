@@ -1,0 +1,17 @@
+Sua IA não esqueceu porque é ruim. Ela esqueceu porque a conversa passou do limite que ela consegue ler.
+
+Esse limite se chama janela de contexto. Quando a conversa fica longa, o começo vai ficando pra trás: o tom que você pediu, o preço, o nome do cliente.
+
+O que resolve:
+→ uma conversa por assunto
+→ um Projeto com as instruções fixas
+→ pedir um resumo antes de trocar de conversa
+→ colar esse resumo na conversa nova
+
+O prompt do resumo está no slide 8. Salva o post pra ter ele à mão.
+
+Qual desses sinais você já viu na sua IA: resposta genérica, contradição ou formato esquecido? Me conta aqui.
+
+E me segue pra mais conteúdo sobre IA na prática.
+
+#inteligenciaartificial #claude #chatgpt #produtividade #ia
