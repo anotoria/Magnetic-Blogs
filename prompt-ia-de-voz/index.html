@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Prompt da IA de Voz</title>
+<meta name="description" content="O prompt que eu usei para criar uma IA de voz completa no HighLevel com o Ask AI: o modelo para preencher, o exemplo pronto e dicas de voz e de prompt.">
+<meta property="og:title" content="Criei uma IA de voz com 01 prompt">
+<meta property="og:description" content="O modelo para preencher, o exemplo pronto e as dicas para ajustar a voz e o prompt. Por Rodrigo Mendes.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Página escura na cor da marca: capa, explicações em cartões e os dois prompts em caixas com botão de copiar */
+:root{--bg:#0f0c0a;--card:#1a1512;--card2:#221b17;--line:#2f2723;--fg:#f6efe9;--muted:#b9aca3;--acc:#ff703d;--acc2:#ffa27c;
+--ft:"Inter Tight","Arial Narrow",sans-serif;--fx:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--fm:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--fx)}
+a{color:var(--acc2);text-underline-offset:3px}
+h1,h2,h3{font-family:var(--ft);font-weight:900;line-height:1.05;margin:0;text-wrap:balance}
+.wrap{max-width:860px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left))}
+.capa{position:relative;overflow:hidden;padding-block:56px 48px;border-bottom:1px solid var(--line)}
+.capa::before{content:"";position:absolute;right:-20vmax;bottom:-30vmax;width:70vmax;height:70vmax;background:radial-gradient(circle,rgba(255,112,61,.30),transparent 60%);pointer-events:none}
+.selo{font:700 12px var(--fx);letter-spacing:.16em;text-transform:uppercase;color:var(--acc2)}
+.capa h1{font-size:clamp(40px,8vw,76px);text-transform:uppercase;margin-top:12px}
+.capa h1 em{font-style:normal;color:var(--acc)}
+.capa p.sub{font-size:clamp(17px,2.4vw,20px);color:#ddd2ca;max-width:620px;margin-top:16px}
+.atalhos{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 18px;font:700 15px var(--fx);text-decoration:none;border:1px solid var(--acc);cursor:pointer}
+.btn.cheio{background:var(--acc);color:#1a0c06}.btn.vazio{background:transparent;color:var(--fg)}
+section{padding-block:40px;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(28px,5vw,40px);text-transform:uppercase}
+section h2 span{color:var(--acc)}
+section > .wrap > p,section li{color:#e6dcd4}
+section > .wrap > p{margin:14px 0 0}
+.num{font:800 13px var(--fm);color:var(--acc);letter-spacing:.1em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px}
+.card h3{font-size:20px;margin-bottom:6px}.card p{margin:0;color:var(--muted);font-size:15px}
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin-top:22px}
+.vs .card h3{color:var(--acc)}
+.vs ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:15px}
+ol.passos{counter-reset:p;list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+ol.passos li{counter-increment:p;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 60px;position:relative}
+ol.passos li::before{content:counter(p);position:absolute;left:16px;top:13px;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#1a0c06;font:800 15px var(--fx);display:grid;place-items:center}
+ol.passos b,ul.dicas b{color:var(--fg)}
+ul.dicas{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+ul.dicas li{background:var(--card);border-left:3px solid var(--acc);border-radius:10px;padding:12px 16px}
+.prompt{margin-top:22px;background:var(--card2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.prompt .barra{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.prompt .barra b{font:800 14px var(--fx);letter-spacing:.06em;text-transform:uppercase}
+.prompt pre{margin:0;padding:16px;max-height:520px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:13.5px/1.6 var(--fm);color:#efe5dd}
+.copiar{background:var(--acc);color:#1a0c06;border:0;border-radius:999px;padding:9px 16px;font:800 14px var(--fx);cursor:pointer}
+.copiar.ok{background:#3ccf7a}
+.aviso{margin-top:16px;background:rgba(255,112,61,.10);border:1px solid rgba(255,112,61,.35);border-radius:12px;padding:12px 16px;color:#f3e4da;font-size:15px}
+mark{background:rgba(255,112,61,.22);color:var(--fg);padding:0 4px;border-radius:4px}
+footer{padding-block:44px 64px}
+footer h2{font-size:30px;text-transform:uppercase}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin-top:20px}
+.links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--fg)}
+.links a small{display:block;color:var(--muted);font-size:13px}
+.links a b{color:var(--acc2)}
+.assin{margin-top:28px;color:var(--muted);font-size:14px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="capa"><div class="wrap">
+  <div class="selo">Eu amo recorrência · Parte 3</div>
+  <h1>Criei uma IA de voz <em>com 01 prompt</em></h1>
+  <p class="sub">Aqui está o prompt que eu usei no vídeo. Tem o <b>modelo para você preencher</b> com o seu negócio e o <b>exemplo pronto</b> da Cleaning Box 2000, mais as dicas para deixar a voz e o atendimento do seu jeito.</p>
+  <div class="atalhos"><a class="btn cheio" href="#template">Ir para o modelo</a><a class="btn vazio" href="#exemplo">Ver o exemplo pronto</a></div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="num">01</div>
+  <h2>O que é o <span>Ask AI</span></h2>
+  <p>O Ask AI é o assistente de inteligência artificial que fica dentro do HighLevel, no topo da subconta. Em vez de você clicar em dezenas de telas, você escreve em português o que quer, e ele monta para você.</p>
+  <div class="cards">
+    <div class="card"><h3>Você descreve</h3><p>Explica o negócio, os serviços, os valores e como quer o atendimento. Quanto mais claro, melhor o resultado.</p></div>
+    <div class="card"><h3>Ele mostra o plano</h3><p>Antes de criar, ele apresenta o que vai montar: agente, agendas, ações e automações. Você aprova ou pede ajuste.</p></div>
+    <div class="card"><h3>Ele constrói</h3><p>Cria tudo dentro da sua conta. Depois você revisa, testa e publica.</p></div>
+  </div>
+  <p class="aviso">O Ask AI está sendo liberado aos poucos nas contas. Se ele não aparecer no topo da sua subconta, verifique se ela tem o Ask AI e a IA de voz ativos. Algumas integrações, como número de telefone e canais de mensagem, ainda precisam ser ligadas por você.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="num">02</div>
+  <h2>O que é uma <span>IA de voz</span></h2>
+  <p>É um atendente virtual que conversa por ligação, com voz natural, a qualquer hora. Ele entende o que o cliente pede, responde as dúvidas, consulta a agenda e marca o horário sozinho, como a Beatriz fez no vídeo.</p>
+  <div class="cards">
+    <div class="card"><h3>Atende e explica</h3><p>Apresenta os serviços e os valores que você definiu, sem inventar nada.</p></div>
+    <div class="card"><h3>Agenda sozinha</h3><p>Coleta nome, endereço e horário, confirma em voz alta e marca na agenda certa.</p></div>
+    <div class="card"><h3>Dispara automações</h3><p>No fim da ligação, envia a confirmação por WhatsApp, SMS ou e-mail e salva tudo no contato.</p></div>
+  </div>
+  <p>É por isso que ela vira <mark>recorrência</mark>: você monta uma vez para o cliente e cobra todo mês pelo atendimento funcionando.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="num">03</div>
+  <h2>Modelo <span>x</span> exemplo: qual usar</h2>
+  <p>Você vai encontrar dois prompts aqui embaixo. Os dois criam a mesma coisa: uma IA de voz completa, com agendas e confirmação automática. A diferença é para que serve cada um.</p>
+  <div class="vs">
+    <div class="card"><h3>1. O modelo (template)</h3><p>É o prompt "em branco", para qualquer negócio.</p><ul><li>Tem campos entre <b>[[colchetes duplos]]</b> para você trocar pelos dados da sua empresa ou do seu cliente.</li><li>Use quando for criar a sua própria IA de voz.</li></ul></div>
+    <div class="card"><h3>2. O exemplo pronto</h3><p>É o modelo já preenchido para a Cleaning Box 2000, a empresa de limpeza do vídeo.</p><ul><li>Mostra como fica cada campo preenchido de verdade.</li><li>Use como referência na hora de preencher o seu, ou cole como está para testar.</li></ul></div>
+  </div>
+</div></section>
+
+<section id="template"><div class="wrap">
+  <div class="num">04</div>
+  <h2>O modelo para <span>preencher</span></h2>
+  <p>Troque tudo o que estiver entre <b>[[colchetes duplos]]</b> pelas informações do negócio. Se algum item não se aplica, escreva "NÃO SE APLICA". Depois de preencher, apague o bloco de instruções do topo.</p>
+  <div class="prompt"><div class="barra"><b>Modelo · IA de voz completa</b><button class="copiar" data-alvo="p1" type="button">Copiar o modelo</button></div><pre id="p1">═══════════════════════════════════════════════
+TEMPLATE: IA DE VOZ COMPLETA (agendas + IA + automação)
+═══════════════════════════════════════════════
+COMO USAR: substitua tudo o que estiver entre [[COLCHETES DUPLOS]] pelas informações do seu negócio. Os exemplos entre parênteses são só para guiar. Apague os exemplos e os colchetes depois de preencher. Se algum item não se aplica ao seu negócio, escreva &quot;NÃO SE APLICA&quot;. Depois de preencher, apague este bloco de instruções e envie o restante.
+═══════════════════════════════════════════════
+
+Crie do zero, em uma única execução e com uma única aprovação minha, uma IA de Voz completa para a empresa [[NOME DA EMPRESA]]. Não me faça perguntas. Todas as informações estão neste prompt. Use as decisões padrão que indico aqui.
+
+OBJETIVO
+Uma IA de Voz em português PT-BR que atende clientes interessados em [[O QUE VOCÊ VENDE/ATENDE. Ex: limpeza de casas e escritórios, consultas odontológicas, aulas de inglês, serviços jurídicos]], apresenta serviços e valores, agenda o atendimento na agenda correta e envia a confirmação ao cliente. Use o modelo Gemini 3.1 Flash Live Preview. Se a seleção do modelo não estiver disponível por API, diga no final exatamente onde trocá-lo.
+
+DADOS DA EMPRESA
+- Empresa: [[NOME DA EMPRESA]]
+- Segmento: [[SEU NICHO. Ex: limpeza, odontologia, educação, advocacia, estética]]
+- Funcionamento: [[DIAS E HORÁRIOS. Ex: segunda a sexta, das 09h às 18h]] (fuso [[SEU FUSO. Ex: America/Sao_Paulo]])
+- Forma de atendimento: [[PRESENCIAL, ONLINE OU AMBOS]]
+- Região atendida: [[CIDADES/REGIÕES, ou &quot;online para todo o Brasil&quot;. Ex: Curitiba e região metropolitana]]
+- Se o cliente estiver fora da região atendida, a IA informa educadamente que não atende o local. [[Apague esta linha se atende online para todo o Brasil]]
+
+REGRAS DO NEGÓCIO
+[[LISTE AS REGRAS E POLÍTICAS QUE A IA PRECISA SABER. Ex: forma de cobrança (por hora, diária, sessão, mensalidade), duração, política de cancelamento, formas de pagamento, o que está incluso e o que o cliente deve providenciar, prazo mínimo de antecedência]]
+- [[REGRA 1]]
+- [[REGRA 2]]
+- [[REGRA 3]]
+- [[Adicione ou remova linhas conforme precisar]]
+
+SERVIÇOS E VALORES (uma agenda para cada serviço)
+1. [[NOME DO SERVIÇO 1]]: [[VALOR E UNIDADE. Ex: R$ 120,00 por pessoa/diária]]. Inclui: [[O QUE ESTÁ INCLUSO]].
+2. [[NOME DO SERVIÇO 2]]: [[VALOR E UNIDADE]]. Inclui: [[O QUE ESTÁ INCLUSO, destacando a diferença para o serviço 1]].
+3. [[NOME DO SERVIÇO 3]]: [[VALOR E UNIDADE]]. Inclui: [[O QUE ESTÁ INCLUSO]].
+4. [[NOME DO SERVIÇO 4, se houver]]: [[VALOR]]. [[Se o valor for sob consulta, escreva: &quot;valor a combinar conforme X. A IA registra as observações e informa que a equipe fará o orçamento.&quot;]]
+[[Adicione ou remova serviços. Cada serviço terá uma agenda e uma ação de agendamento própria]]
+
+AGENDAS
+- Crie uma agenda para cada serviço acima, nomeada &quot;[Serviço] — [[NOME DA EMPRESA]]&quot;.
+- Tipo: evento. Duração de cada horário: [[DURAÇÃO DO ATENDIMENTO. Ex: 30 minutos, 1 hora, 6 horas]].
+- Disponibilidade: [[MESMOS DIAS E HORÁRIOS DE FUNCIONAMENTO, ou horários específicos por serviço]]. Cadastre um dia por vez nos horários de funcionamento.
+- Vincule cada agenda a uma ação de agendamento da IA de Voz, para que ela agende na agenda do serviço escolhido pelo cliente.
+
+DADOS OBRIGATÓRIOS PARA AGENDAR
+- Nome completo
+- [[DADO 2. Ex: endereço completo (rua com número, bairro e cidade) se o atendimento for na casa do cliente. Apague se for online ou no seu local]]
+- [[DADO 3. Ex: e-mail, telefone, CPF, nome do pet, número de pessoas. Apague se não precisar]]
+- Serviço desejado, data e horário
+- Salve todos os campos no contato durante a conversa, à medida que o cliente informar. Não espere o fim da ligação.
+- Confirme todos os dados com o cliente em voz alta antes de agendar.
+
+COMPORTAMENTO DA IA
+- Nome da IA: [[NOME DA ATENDENTE/ATENDENTE VIRTUAL. Ex: Beatriz, Lucas, Sofia]]
+- Voz: [[FEMININA OU MASCULINA]] em PT-BR, adequada para atendimento.
+- Tom: [[FORMAL, DESCONTRAÍDO, EMPÁTICO OU TÉCNICO]], cordial e profissional.
+- Saudação: apresente-se pelo nome da IA e da empresa e pergunte como pode ajudar.
+- Fluxo: identificar a necessidade, apresentar o serviço e o valor, verificar a região, propor o agendamento, coletar os dados, confirmar, agendar e encerrar agradecendo.
+- Nunca invente informações nem ofereça desconto.
+- Fora do horário de funcionamento, informe o horário de atendimento.
+- Duração máxima da chamada: [[MINUTOS. Ex: 15]] minutos. Paciência alta. Lembrete de silêncio após 8 segundos.
+
+CONFIRMAÇÃO AO CLIENTE
+- Crie uma automação (workflow) que dispara quando o agendamento é criado e envia ao cliente, por [[CANAL: WHATSAPP, SMS, E-MAIL OU MAIS DE UM]], uma mensagem de confirmação com nome, serviço, data, horário e [[ENDEREÇO/LINK DA REUNIÃO, se aplicável]].
+- Associe essa automação ao fim da chamada da IA de Voz.
+- Se algum canal não estiver disponível na conta, use os demais e me avise.
+
+AUTOMAÇÕES EXTRAS (opcional)
+[[DESCREVA O QUE MAIS DEVE ACONTECER. Ex: notificar minha equipe por e-mail a cada agendamento, adicionar o contato a uma etapa do funil, enviar lembrete 24h antes. Escreva &quot;NENHUMA&quot; se não quiser]]
+
+ENTREGA FINAL
+Ao terminar, me entregue um resumo em tabela com:
+- as agendas criadas;
+- o agente criado;
+- as ações de agendamento vinculadas;
+- a automação de confirmação;
+- os passos manuais que ainda faltam (publicar o agente, escolher o modelo Gemini se não for possível por API, vincular o número de telefone) e onde clicar em cada um.</pre></div>
+</div></section>
+
+<section id="exemplo"><div class="wrap">
+  <div class="num">05</div>
+  <h2>O exemplo <span>pronto</span></h2>
+  <p>Este é o prompt exato que eu usei no vídeo, para a Cleaning Box 2000. Compare com o modelo e veja como cada campo foi preenchido.</p>
+  <div class="prompt"><div class="barra"><b>Exemplo · Cleaning Box 2000</b><button class="copiar" data-alvo="p2" type="button">Copiar o exemplo</button></div><pre id="p2">Crie do zero, em uma única execução e com uma única aprovação minha, uma IA de Voz completa para a empresa Cleaning Box 2000. Não me faça perguntas. Todas as informações estão neste prompt. Use as decisões padrão que indico aqui.
+
+OBJETIVO
+Uma IA de Voz em português PT-BR que atende clientes interessados em limpeza de casas e escritórios, apresenta serviços e valores, agenda o serviço na agenda correta e envia a confirmação ao cliente. Use o modelo Gemini 3.1 Flash Live Preview. Se a seleção do modelo não estiver disponível por API, diga no final exatamente onde trocá-lo.
+
+DADOS DA EMPRESA
+- Empresa: Cleaning Box 2000
+- Funcionamento: segunda a sábado, das 08h às 18h (fuso America/Sao_Paulo)
+- Atendimento presencial no ABC Paulista: Mauá, Santo André, São Caetano do Sul, São Bernardo do Campo, Diadema, Ribeirão Pires e Rio Grande da Serra
+- Se o cliente for de outra cidade, a IA informa educadamente que não atende a região.
+
+REGRAS DO NEGÓCIO
+- O valor é a diária por pessoa. A diária dura de 2 a 6 horas no local.
+- Se passar de 6 horas, é cobrada mais uma diária (de 2 a 6 horas).
+- O material de limpeza padrão é por conta da empresa.
+- Produtos específicos para chão, vidros ou paredes, de preferência do contratante, devem ser comprados por ele e deixados no local à disposição.
+
+SERVIÇOS E VALORES (uma agenda para cada serviço)
+1. Limpeza Padrão: R$ 120,00 por pessoa/diária. Inclui limpeza de chão, vidros, mesas, cadeiras e áreas comuns.
+2. Limpeza Completa: R$ 320,00 por pessoa/diária. Inclui tudo da Limpeza Padrão, mais banheiros, cozinhas, áreas privativas e passagem de cera ou produto específico conforme o tipo de piso.
+3. Limpeza Escritórios Comerciais: R$ 240,00 por pessoa/diária.
+4. Limpeza Industrial: a partir de R$ 550,00 por pessoa/diária. O valor é a combinar, conforme o metro quadrado e a necessidade específica. Nesse caso, a IA registra as observações e informa que a equipe fará o orçamento detalhado.
+
+AGENDAS
+- Crie 4 agendas, uma por serviço, nomeadas &quot;[Serviço] — Cleaning Box 2000&quot;.
+- Tipo: evento. Duração do horário: 6 horas.
+- Disponibilidade: segunda a sábado, das 08h às 18h. Cadastre um dia por vez nos horários de funcionamento.
+- Vincule cada agenda a uma ação de agendamento da IA de Voz, para que ela agende na agenda do serviço escolhido pelo cliente.
+
+DADOS OBRIGATÓRIOS PARA AGENDAR
+- Nome completo
+- Endereço: rua com número, bairro e cidade
+- Serviço desejado, data e horário
+- Salve todos os campos no contato durante a conversa, à medida que o cliente informar. Não espere o fim da ligação.
+- Confirme todos os dados com o cliente em voz alta antes de agendar.
+
+COMPORTAMENTO DA IA
+- Nome: Beatriz. Voz feminina em PT-BR, adequada para atendimento. Tom cordial, profissional e acolhedor.
+- Saudação: apresente-se como Beatriz, da Cleaning Box 2000, e pergunte como pode ajudar.
+- Fluxo: identificar a necessidade, apresentar o serviço e o valor, verificar a cidade, propor o agendamento, coletar os dados, confirmar, agendar e encerrar agradecendo.
+- Nunca invente informações nem ofereça desconto.
+- Fora do horário de funcionamento, informe o horário de atendimento.
+- Duração máxima da chamada: 15 minutos. Paciência alta. Lembrete de silêncio após 8 segundos.
+
+CONFIRMAÇÃO AO CLIENTE
+- Crie uma automação (workflow) que dispara quando o agendamento é criado e envia ao cliente, por WhatsApp e SMS, uma mensagem de confirmação com nome, serviço, data, horário e endereço.
+- Associe essa automação ao fim da chamada da IA de Voz.
+- Se o canal WhatsApp não estiver disponível na conta, use somente SMS e me avise.
+
+ENTREGA FINAL
+Ao terminar, me entregue um resumo em tabela com:
+- as 4 agendas criadas;
+- o agente criado;
+- as ações de agendamento vinculadas;
+- a automação de confirmação;
+- os passos manuais que ainda faltam (publicar o agente, escolher o modelo Gemini se não for possível por API, vincular o número de telefone) e onde clicar em cada um.</pre></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="num">06</div>
+  <h2>Como usar <span>passo a passo</span></h2>
+  <ol class="passos">
+    <li><b>Preencha o modelo</b> com os dados do negócio: serviços, valores, horários, região e regras.</li>
+    <li><b>Abra o Ask AI</b> no topo da subconta do HighLevel e cole o prompt inteiro.</li>
+    <li><b>Leia o plano</b> que ele mostrar. Confira se as agendas, o agente e a automação estão certos e aprove.</li>
+    <li><b>Espere ele terminar.</b> No fim, ele entrega uma tabela com tudo o que foi criado e o que falta fazer na mão.</li>
+    <li><b>Faça os passos manuais:</b> publicar o agente, escolher o modelo de IA se ele pedir e ligar um número de telefone.</li>
+    <li><b>Teste antes de entregar.</b> Faça uma ligação de teste pelo navegador e depois pelo telefone, como eu fiz no vídeo.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="num">07</div>
+  <h2>Dicas para ajustar <span>a voz</span></h2>
+  <ul class="dicas">
+    <li><b>Escute pelo menos 3 vozes</b> antes de escolher. A voz certa é a que combina com o público do negócio: mais calma para clínica, mais animada para academia.</li>
+    <li><b>Escolha uma voz em português do Brasil.</b> Vozes de outras línguas falando português soam com sotaque.</li>
+    <li><b>Ajuste a velocidade.</b> Se a voz parecer lenta ou arrastada, aumente um pouco. Atendimento rápido demais também cansa, então teste ouvindo uma ligação inteira.</li>
+    <li><b>Escreva valores e siglas do jeito que se fala</b> quando a voz ler errado: "cento e vinte reais" em vez de "R$ 120,00".</li>
+    <li><b>Dê um nome humano</b> à atendente, como Beatriz ou Lucas, e faça ela se apresentar com o nome da empresa.</li>
+    <li><b>Ajuste a paciência e o silêncio.</b> Paciência alta evita que ela corte o cliente no meio da frase. O lembrete de silêncio de cerca de 8 segundos traz a pessoa de volta sem pressionar.</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <div class="num">08</div>
+  <h2>Dicas para ajustar <span>o prompt</span></h2>
+  <ul class="dicas">
+    <li><b>Coloque valores e regras exatos.</b> A IA só sabe o que está escrito. O que não estiver no prompt, ela não deve responder.</li>
+    <li><b>Diga o que ela não pode fazer:</b> nunca inventar informação, nunca dar desconto e nunca agendar fora do horário.</li>
+    <li><b>Liste os dados obrigatórios</b> e peça para ela confirmar tudo em voz alta antes de agendar. Isso evita agendamento errado.</li>
+    <li><b>Descreva o fluxo da conversa na ordem:</b> entender a necessidade, apresentar o serviço, verificar a região, coletar os dados, confirmar e agendar.</li>
+    <li><b>Teste os casos difíceis:</b> cliente de outra cidade, pedido de desconto, ligação fora do horário e cliente que muda de ideia no meio.</li>
+    <li><b>Mude uma coisa por vez</b> e teste de novo. Assim você sabe exatamente o que melhorou ou piorou.</li>
+    <li><b>Guarde a versão que funcionou</b> antes de mexer. Se der errado, é só voltar.</li>
+  </ul>
+</div></section>
+
+<footer><div class="wrap">
+  <h2>Quer implementar isso <span style="color:var(--acc)">no seu negócio?</span></h2>
+  <div class="links">
+    <a href="https://ghlbrazil.com" target="_blank" rel="noopener"><small>Subconta HighLevel por</small><b>US$ 1 · ghlbrazil.com</b></a>
+    <a href="https://comunidade.magneticflows.com" target="_blank" rel="noopener"><small>Comunidade grátis</small><b>comunidade.magneticflows.com</b></a>
+    <a href="https://rodrigomendesfn.com.br" target="_blank" rel="noopener"><small>IA no seu negócio</small><b>rodrigomendesfn.com.br</b></a>
+    <a href="https://instagram.com/rodrigomendesfn" target="_blank" rel="noopener"><small>Instagram</small><b>@rodrigomendesfn</b></a>
+  </div>
+  <p class="assin">Rodrigo Mendes · IA, CRM e automação</p>
+</div></footer>
+<script>
+document.querySelectorAll('.copiar').forEach(b=>b.addEventListener('click',async()=>{
+  const t=document.getElementById(b.dataset.alvo).innerText, o=b.textContent;
+  try{await navigator.clipboard.writeText(t)}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.alvo));const s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy')}catch(_){}}
+  b.textContent='Copiado!';b.classList.add('ok');setTimeout(()=>{b.textContent=o;b.classList.remove('ok')},1800)}));
+</script>
+</body>
+</html>
