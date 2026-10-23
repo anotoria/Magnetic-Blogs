@@ -1,0 +1,72 @@
+═══════════════════════════════════════════════
+TEMPLATE: IA DE VOZ COMPLETA (agendas + IA + automação)
+═══════════════════════════════════════════════
+COMO USAR: substitua tudo o que estiver entre [[COLCHETES DUPLOS]] pelas informações do seu negócio. Os exemplos entre parênteses são só para guiar. Apague os exemplos e os colchetes depois de preencher. Se algum item não se aplica ao seu negócio, escreva "NÃO SE APLICA". Depois de preencher, apague este bloco de instruções e envie o restante.
+═══════════════════════════════════════════════
+
+Crie do zero, em uma única execução e com uma única aprovação minha, uma IA de Voz completa para a empresa [[NOME DA EMPRESA]]. Não me faça perguntas. Todas as informações estão neste prompt. Use as decisões padrão que indico aqui.
+
+OBJETIVO
+Uma IA de Voz em português PT-BR que atende clientes interessados em [[O QUE VOCÊ VENDE/ATENDE. Ex: limpeza de casas e escritórios, consultas odontológicas, aulas de inglês, serviços jurídicos]], apresenta serviços e valores, agenda o atendimento na agenda correta e envia a confirmação ao cliente. Use o modelo Gemini 3.1 Flash Live Preview. Se a seleção do modelo não estiver disponível por API, diga no final exatamente onde trocá-lo.
+
+DADOS DA EMPRESA
+- Empresa: [[NOME DA EMPRESA]]
+- Segmento: [[SEU NICHO. Ex: limpeza, odontologia, educação, advocacia, estética]]
+- Funcionamento: [[DIAS E HORÁRIOS. Ex: segunda a sexta, das 09h às 18h]] (fuso [[SEU FUSO. Ex: America/Sao_Paulo]])
+- Forma de atendimento: [[PRESENCIAL, ONLINE OU AMBOS]]
+- Região atendida: [[CIDADES/REGIÕES, ou "online para todo o Brasil". Ex: Curitiba e região metropolitana]]
+- Se o cliente estiver fora da região atendida, a IA informa educadamente que não atende o local. [[Apague esta linha se atende online para todo o Brasil]]
+
+REGRAS DO NEGÓCIO
+[[LISTE AS REGRAS E POLÍTICAS QUE A IA PRECISA SABER. Ex: forma de cobrança (por hora, diária, sessão, mensalidade), duração, política de cancelamento, formas de pagamento, o que está incluso e o que o cliente deve providenciar, prazo mínimo de antecedência]]
+- [[REGRA 1]]
+- [[REGRA 2]]
+- [[REGRA 3]]
+- [[Adicione ou remova linhas conforme precisar]]
+
+SERVIÇOS E VALORES (uma agenda para cada serviço)
+1. [[NOME DO SERVIÇO 1]]: [[VALOR E UNIDADE. Ex: R$ 120,00 por pessoa/diária]]. Inclui: [[O QUE ESTÁ INCLUSO]].
+2. [[NOME DO SERVIÇO 2]]: [[VALOR E UNIDADE]]. Inclui: [[O QUE ESTÁ INCLUSO, destacando a diferença para o serviço 1]].
+3. [[NOME DO SERVIÇO 3]]: [[VALOR E UNIDADE]]. Inclui: [[O QUE ESTÁ INCLUSO]].
+4. [[NOME DO SERVIÇO 4, se houver]]: [[VALOR]]. [[Se o valor for sob consulta, escreva: "valor a combinar conforme X. A IA registra as observações e informa que a equipe fará o orçamento."]]
+[[Adicione ou remova serviços. Cada serviço terá uma agenda e uma ação de agendamento própria]]
+
+AGENDAS
+- Crie uma agenda para cada serviço acima, nomeada "[Serviço] — [[NOME DA EMPRESA]]".
+- Tipo: evento. Duração de cada horário: [[DURAÇÃO DO ATENDIMENTO. Ex: 30 minutos, 1 hora, 6 horas]].
+- Disponibilidade: [[MESMOS DIAS E HORÁRIOS DE FUNCIONAMENTO, ou horários específicos por serviço]]. Cadastre um dia por vez nos horários de funcionamento.
+- Vincule cada agenda a uma ação de agendamento da IA de Voz, para que ela agende na agenda do serviço escolhido pelo cliente.
+
+DADOS OBRIGATÓRIOS PARA AGENDAR
+- Nome completo
+- [[DADO 2. Ex: endereço completo (rua com número, bairro e cidade) se o atendimento for na casa do cliente. Apague se for online ou no seu local]]
+- [[DADO 3. Ex: e-mail, telefone, CPF, nome do pet, número de pessoas. Apague se não precisar]]
+- Serviço desejado, data e horário
+- Salve todos os campos no contato durante a conversa, à medida que o cliente informar. Não espere o fim da ligação.
+- Confirme todos os dados com o cliente em voz alta antes de agendar.
+
+COMPORTAMENTO DA IA
+- Nome da IA: [[NOME DA ATENDENTE/ATENDENTE VIRTUAL. Ex: Beatriz, Lucas, Sofia]]
+- Voz: [[FEMININA OU MASCULINA]] em PT-BR, adequada para atendimento.
+- Tom: [[FORMAL, DESCONTRAÍDO, EMPÁTICO OU TÉCNICO]], cordial e profissional.
+- Saudação: apresente-se pelo nome da IA e da empresa e pergunte como pode ajudar.
+- Fluxo: identificar a necessidade, apresentar o serviço e o valor, verificar a região, propor o agendamento, coletar os dados, confirmar, agendar e encerrar agradecendo.
+- Nunca invente informações nem ofereça desconto.
+- Fora do horário de funcionamento, informe o horário de atendimento.
+- Duração máxima da chamada: [[MINUTOS. Ex: 15]] minutos. Paciência alta. Lembrete de silêncio após 8 segundos.
+
+CONFIRMAÇÃO AO CLIENTE
+- Crie uma automação (workflow) que dispara quando o agendamento é criado e envia ao cliente, por [[CANAL: WHATSAPP, SMS, E-MAIL OU MAIS DE UM]], uma mensagem de confirmação com nome, serviço, data, horário e [[ENDEREÇO/LINK DA REUNIÃO, se aplicável]].
+- Associe essa automação ao fim da chamada da IA de Voz.
+- Se algum canal não estiver disponível na conta, use os demais e me avise.
+
+AUTOMAÇÕES EXTRAS (opcional)
+[[DESCREVA O QUE MAIS DEVE ACONTECER. Ex: notificar minha equipe por e-mail a cada agendamento, adicionar o contato a uma etapa do funil, enviar lembrete 24h antes. Escreva "NENHUMA" se não quiser]]
+
+ENTREGA FINAL
+Ao terminar, me entregue um resumo em tabela com:
+- as agendas criadas;
+- o agente criado;
+- as ações de agendamento vinculadas;
+- a automação de confirmação;
+- os passos manuais que ainda faltam (publicar o agente, escolher o modelo Gemini se não for possível por API, vincular o número de telefone) e onde clicar em cada um.

@@ -61,6 +61,7 @@ footer h2{font-size:30px;text-transform:uppercase}
 .links a small{display:block;color:var(--muted);font-size:13px}
 .links a b{color:var(--acc2)}
 .assin{margin-top:28px;color:var(--muted);font-size:14px}
+@media print{.atalhos,.copiar,.prompt .barra a{display:none!important}.prompt pre{max-height:none;overflow:visible}section,.card,ol.passos li,ul.dicas li,.prompt{break-inside:avoid-page}.prompt{break-inside:auto}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 </style>
 </head>
@@ -69,7 +70,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
   <div class="selo">Eu amo recorrência · Parte 3</div>
   <h1>Criei uma IA de voz <em>com 01 prompt</em></h1>
   <p class="sub">Aqui está o prompt que eu usei no vídeo. Tem o <b>modelo para você preencher</b> com o seu negócio e o <b>exemplo pronto</b> da Cleaning Box 2000, mais as dicas para deixar a voz e o atendimento do seu jeito.</p>
-  <div class="atalhos"><a class="btn cheio" href="#template">Ir para o modelo</a><a class="btn vazio" href="#exemplo">Ver o exemplo pronto</a></div>
+  <div class="atalhos"><a class="btn cheio" href="Prompt-IA-de-Voz-Rodrigo-Mendes.pdf" download>Baixar o PDF completo</a><a class="btn vazio" href="#template">Ir para o modelo</a><a class="btn vazio" href="#exemplo">Ver o exemplo pronto</a></div>
 </div></header>
 
 <section><div class="wrap">
@@ -110,7 +111,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset
   <div class="num">04</div>
   <h2>O modelo para <span>preencher</span></h2>
   <p>Troque tudo o que estiver entre <b>[[colchetes duplos]]</b> pelas informações do negócio. Se algum item não se aplica, escreva "NÃO SE APLICA". Depois de preencher, apague o bloco de instruções do topo.</p>
-  <div class="prompt"><div class="barra"><b>Modelo · IA de voz completa</b><button class="copiar" data-alvo="p1" type="button">Copiar o modelo</button></div><pre id="p1">═══════════════════════════════════════════════
+  <div class="prompt"><div class="barra"><b>Modelo · IA de voz completa</b><span style="display:flex;gap:8px;flex-wrap:wrap"><button class="copiar" data-alvo="p1" type="button">Copiar o modelo</button><a class="btn vazio" style="padding:8px 14px;font-size:14px" href="Prompt-IA-de-Voz-MODELO.txt" download>Baixar .txt</a></span></div><pre id="p1">═══════════════════════════════════════════════
 TEMPLATE: IA DE VOZ COMPLETA (agendas + IA + automação)
 ═══════════════════════════════════════════════
 COMO USAR: substitua tudo o que estiver entre [[COLCHETES DUPLOS]] pelas informações do seu negócio. Os exemplos entre parênteses são só para guiar. Apague os exemplos e os colchetes depois de preencher. Se algum item não se aplica ao seu negócio, escreva &quot;NÃO SE APLICA&quot;. Depois de preencher, apague este bloco de instruções e envie o restante.
@@ -188,7 +189,7 @@ Ao terminar, me entregue um resumo em tabela com:
   <div class="num">05</div>
   <h2>O exemplo <span>pronto</span></h2>
   <p>Este é o prompt exato que eu usei no vídeo, para a Cleaning Box 2000. Compare com o modelo e veja como cada campo foi preenchido.</p>
-  <div class="prompt"><div class="barra"><b>Exemplo · Cleaning Box 2000</b><button class="copiar" data-alvo="p2" type="button">Copiar o exemplo</button></div><pre id="p2">Crie do zero, em uma única execução e com uma única aprovação minha, uma IA de Voz completa para a empresa Cleaning Box 2000. Não me faça perguntas. Todas as informações estão neste prompt. Use as decisões padrão que indico aqui.
+  <div class="prompt"><div class="barra"><b>Exemplo · Cleaning Box 2000</b><span style="display:flex;gap:8px;flex-wrap:wrap"><button class="copiar" data-alvo="p2" type="button">Copiar o exemplo</button><a class="btn vazio" style="padding:8px 14px;font-size:14px" href="Prompt-IA-de-Voz-EXEMPLO.txt" download>Baixar .txt</a></span></div><pre id="p2">Crie do zero, em uma única execução e com uma única aprovação minha, uma IA de Voz completa para a empresa Cleaning Box 2000. Não me faça perguntas. Todas as informações estão neste prompt. Use as decisões padrão que indico aqui.
 
 OBJETIVO
 Uma IA de Voz em português PT-BR que atende clientes interessados em limpeza de casas e escritórios, apresenta serviços e valores, agenda o serviço na agenda correta e envia a confirmação ao cliente. Use o modelo Gemini 3.1 Flash Live Preview. Se a seleção do modelo não estiver disponível por API, diga no final exatamente onde trocá-lo.

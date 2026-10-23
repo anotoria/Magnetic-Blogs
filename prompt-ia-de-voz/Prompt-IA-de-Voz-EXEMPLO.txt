@@ -1,0 +1,56 @@
+Crie do zero, em uma única execução e com uma única aprovação minha, uma IA de Voz completa para a empresa Cleaning Box 2000. Não me faça perguntas. Todas as informações estão neste prompt. Use as decisões padrão que indico aqui.
+
+OBJETIVO
+Uma IA de Voz em português PT-BR que atende clientes interessados em limpeza de casas e escritórios, apresenta serviços e valores, agenda o serviço na agenda correta e envia a confirmação ao cliente. Use o modelo Gemini 3.1 Flash Live Preview. Se a seleção do modelo não estiver disponível por API, diga no final exatamente onde trocá-lo.
+
+DADOS DA EMPRESA
+- Empresa: Cleaning Box 2000
+- Funcionamento: segunda a sábado, das 08h às 18h (fuso America/Sao_Paulo)
+- Atendimento presencial no ABC Paulista: Mauá, Santo André, São Caetano do Sul, São Bernardo do Campo, Diadema, Ribeirão Pires e Rio Grande da Serra
+- Se o cliente for de outra cidade, a IA informa educadamente que não atende a região.
+
+REGRAS DO NEGÓCIO
+- O valor é a diária por pessoa. A diária dura de 2 a 6 horas no local.
+- Se passar de 6 horas, é cobrada mais uma diária (de 2 a 6 horas).
+- O material de limpeza padrão é por conta da empresa.
+- Produtos específicos para chão, vidros ou paredes, de preferência do contratante, devem ser comprados por ele e deixados no local à disposição.
+
+SERVIÇOS E VALORES (uma agenda para cada serviço)
+1. Limpeza Padrão: R$ 120,00 por pessoa/diária. Inclui limpeza de chão, vidros, mesas, cadeiras e áreas comuns.
+2. Limpeza Completa: R$ 320,00 por pessoa/diária. Inclui tudo da Limpeza Padrão, mais banheiros, cozinhas, áreas privativas e passagem de cera ou produto específico conforme o tipo de piso.
+3. Limpeza Escritórios Comerciais: R$ 240,00 por pessoa/diária.
+4. Limpeza Industrial: a partir de R$ 550,00 por pessoa/diária. O valor é a combinar, conforme o metro quadrado e a necessidade específica. Nesse caso, a IA registra as observações e informa que a equipe fará o orçamento detalhado.
+
+AGENDAS
+- Crie 4 agendas, uma por serviço, nomeadas "[Serviço] — Cleaning Box 2000".
+- Tipo: evento. Duração do horário: 6 horas.
+- Disponibilidade: segunda a sábado, das 08h às 18h. Cadastre um dia por vez nos horários de funcionamento.
+- Vincule cada agenda a uma ação de agendamento da IA de Voz, para que ela agende na agenda do serviço escolhido pelo cliente.
+
+DADOS OBRIGATÓRIOS PARA AGENDAR
+- Nome completo
+- Endereço: rua com número, bairro e cidade
+- Serviço desejado, data e horário
+- Salve todos os campos no contato durante a conversa, à medida que o cliente informar. Não espere o fim da ligação.
+- Confirme todos os dados com o cliente em voz alta antes de agendar.
+
+COMPORTAMENTO DA IA
+- Nome: Beatriz. Voz feminina em PT-BR, adequada para atendimento. Tom cordial, profissional e acolhedor.
+- Saudação: apresente-se como Beatriz, da Cleaning Box 2000, e pergunte como pode ajudar.
+- Fluxo: identificar a necessidade, apresentar o serviço e o valor, verificar a cidade, propor o agendamento, coletar os dados, confirmar, agendar e encerrar agradecendo.
+- Nunca invente informações nem ofereça desconto.
+- Fora do horário de funcionamento, informe o horário de atendimento.
+- Duração máxima da chamada: 15 minutos. Paciência alta. Lembrete de silêncio após 8 segundos.
+
+CONFIRMAÇÃO AO CLIENTE
+- Crie uma automação (workflow) que dispara quando o agendamento é criado e envia ao cliente, por WhatsApp e SMS, uma mensagem de confirmação com nome, serviço, data, horário e endereço.
+- Associe essa automação ao fim da chamada da IA de Voz.
+- Se o canal WhatsApp não estiver disponível na conta, use somente SMS e me avise.
+
+ENTREGA FINAL
+Ao terminar, me entregue um resumo em tabela com:
+- as 4 agendas criadas;
+- o agente criado;
+- as ações de agendamento vinculadas;
+- a automação de confirmação;
+- os passos manuais que ainda faltam (publicar o agente, escolher o modelo Gemini se não for possível por API, vincular o número de telefone) e onde clicar em cada um.
