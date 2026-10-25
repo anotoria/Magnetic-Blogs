@@ -1,0 +1,37 @@
+{
+ "data": "2026-10-26",
+ "edicao": "Edição de segunda · 26 de outubro",
+ "periodo": "19/10 a 25/10",
+ "manchete": "A semana em *11 posts*",
+ "lead": "Da memória das IAs às skills do Claude: tudo o que saiu por aqui de segunda a domingo.",
+ "dias": [
+  {"dia": "Segunda-feira, 19/10", "curto": "Seg 19/10", "materias": [
+   {"titulo": "O que é *CAC*", "resumo": "Tudo que você gastou pra vender no mês dividido pelos clientes novos.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/6c6a7bbc769c109508e7a62974cc229671a524c7/social/frases-tweet/frase-06.jpg"},
+   {"titulo": "Como cada IA *lembra de você*", "resumo": "Claude, ChatGPT e Gemini guardam memória de jeitos diferentes. E memória do cliente é CRM.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/fc4109eeea22d2310c7cba08026225e89713fabd/social/2026-10-19-memoria-ias/slide-1.jpg"}]},
+  {"dia": "Terça-feira, 20/10", "curto": "Ter 20/10", "materias": [
+   {"titulo": "A conta das *ferramentas soltas*", "resumo": "Agenda, funil, e-mail, automação e chatbot separados, contra tudo na mesma conta do HighLevel.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/fc4109eeea22d2310c7cba08026225e89713fabd/social/2026-10-20-ferramentas-soltas/slide-1.jpg"}]},
+  {"dia": "Quarta-feira, 21/10", "curto": "Qua 21/10", "materias": [
+   {"titulo": "Lead quente *não espera*", "resumo": "Se a resposta demora, ele procura outro. Atendimento rápido é a primeira parte da venda.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/6c6a7bbc769c109508e7a62974cc229671a524c7/social/frases-tweet/frase-07.jpg"},
+   {"titulo": "Claude, ChatGPT *ou Gemini?*", "resumo": "Depende da tarefa. E no atendimento dá pra usar os três no Agent Studio.", "palavra": "3IAS", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/fc4109eeea22d2310c7cba08026225e89713fabd/social/2026-10-21-qual-ia-usar/slide-1.jpg"}]},
+  {"dia": "Quinta-feira, 22/10", "curto": "Qui 22/10", "materias": [
+   {"titulo": "Aprovação de post *pelo WhatsApp?*", "resumo": "Não é falta de talento, é falta de sistema: link de aprovação e o mês agendado de uma vez.", "palavra": "APROVA", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/aa94a997841116ba9df4fdcfaa984e100c05459f/social/2026-10-22-aprova-v1/slide-1.jpg"},
+   {"titulo": "Sua IA tem *memória de peixinho?*", "resumo": "A conversa passou da janela de contexto. Uma conversa por assunto e um resumo resolvem.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/c262e75a2581cb66fb48bc03496b2565da60538a/social/2026-10-22-memoria-peixinho/slide-1.jpg"}]},
+  {"dia": "Sexta-feira, 23/10", "curto": "Sex 23/10", "materias": [
+   {"titulo": "Referência *não nasce pronta*", "resumo": "Um cliente bem atendido, depois outro, depois outro. É repetição bem feita.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/6c6a7bbc769c109508e7a62974cc229671a524c7/social/frases-tweet/frase-08.jpg"},
+   {"titulo": "As 6 ferramentas *da minha mesa*", "resumo": "Claude, HighLevel, Canva, ElevenLabs, Fathom e Apify: o que cada uma faz no meu dia.", "palavra": "MESA", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/aa94a997841116ba9df4fdcfaa984e100c05459f/social/2026-10-23-mesa/slide-1.jpg"}]},
+  {"dia": "Sábado, 24/10", "curto": "Sáb 24/10", "materias": [
+   {"titulo": "*5 telas* do HighLevel", "resumo": "Conversas, Oportunidades, Agenda, Automações e Painel: as que eu abro todo dia.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/fc4109eeea22d2310c7cba08026225e89713fabd/social/2026-10-24-telas-highlevel/slide-1.jpg"}]},
+  {"dia": "Domingo, 25/10", "curto": "Dom 25/10", "materias": [
+   {"titulo": "As *5 skills* que eu mais uso", "resumo": "Pastas de instruções que ensinam o Claude a fazer a tarefa do seu jeito, sempre igual.", "palavra": "", "capa": "https://raw.githubusercontent.com/anotoria/Magnetic-Blogs/fc4109eeea22d2310c7cba08026225e89713fabd/social/2026-10-25-cinco-skills/slide-1.jpg"}]}
+ ],
+ "palavras": [
+  ["3IAS", "Guia com a tarefa certa pra cada IA e um prompt pronto"],
+  ["APROVA", "Passo a passo da aprovação por link"],
+  ["MESA", "Lista das ferramentas com o link de cada uma"]
+ ],
+ "previsao": [
+  ["Ter 27/10", "LTV: quanto um cliente vale de verdade"],
+  ["Qui 29/10", "Pare de vender horas e venda resultado"]
+ ],
+ "previsao_frase": "Semana de céu limpo, com ventos de recorrência e frente fria pra quem vende só hora."
+}
